@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Guide to Java</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #2d2d2d;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        h1, h2, h3 {
+            color: #9cdcfe;
+        }
+        .step {
+            margin-bottom: 30px;
+        }
+        code, pre {
+            display: block;
+            background: #1e1e1e;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            color: #c5c8c6;
+            border: 1px solid #444;
+        }
+        .copy-btn {
+            background: #007acc;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .copy-btn:hover {
+            background: #005a9e;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #2d2d2d;
+            color: #dcdcdc;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #444;
+        }
+        footer a {
+            color: #9cdcfe;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 767px) {
+            .container {
+                padding: 10px;
+            }
+        }
+        .navbar-nav .nav-item {
+            margin-left: 10px;
+        }
+        .nav-link {
+            color: #9cdcfe !important;
+        }
+        .nav-link:hover {
+            color: #7ab9ff !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Java Guide</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#java-history"><i class="fas fa-history"></i> Java History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#write-code"><i class="fas fa-code"></i> Write Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#run-code"><i class="fas fa-play"></i> Run Code</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#setup"><i class="fas fa-cogs"></i> Setup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#syntax"><i class="fas fa-sitemap"></i> Syntax & Basics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#advanced-topics"><i class="fas fa-rocket"></i> Advanced Topics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Comprehensive Guide to Java</h1>
+
+        <!-- Java History -->
+        <div class="step" id="java-history">
+            <h2>Java History</h2>
+            <p>Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. Developed by James Gosling and his team at Sun Microsystems, Java was first released in 1996.</p>
+            <p><strong>Key Milestones in Java's History:</strong></p>
+            <ul>
+                <li><strong>1991:</strong> The original concept of Java, initially called Oak, was developed as part of the Green Project at Sun Microsystems.</li>
+                <li><strong>1995:</strong> The first public release of Java 1.0, which introduced the core features of the language and its ability to run on multiple platforms.</li>
+                <li><strong>1998:</strong> Release of Java 2 (J2SE), which included significant improvements such as Swing for building graphical user interfaces and collections framework.</li>
+                <li><strong>2004:</strong> Introduction of Java 5 (also known as J2SE 5.0), which brought major language enhancements such as generics and metadata annotations.</li>
+                <li><strong>2011:</strong> Oracle acquired Sun Microsystems and continued to develop Java, releasing Java SE 7 with new features and improvements.</li>
+                <li><strong>2014:</strong> Introduction of Java SE 8, which included lambda expressions, the Stream API, and the new Date and Time API.</li>
+                <li><strong>2017 and beyond:</strong> The Java community has embraced a faster release cadence, with new versions of Java being released every six months. Key updates include Java 9's module system and Java 11's long-term support release.</li>
+            </ul>
+            <p>Java continues to evolve with a vibrant community and is used in a wide range of applications from web and enterprise applications to mobile and embedded systems.</p>
+        </div>
+
+        <!-- Write Code -->
+        <div class="step" id="write-code">
+            <h2>Step 1: Write the Java Code</h2>
+            <p>To start, you'll need to write your Java code. Create a new file named <code>HelloWorld.java</code> and add the following code:</p>
+            <pre><code id="javaCode">// HelloWorld.java
+public class HelloWorld {
+    public static void main(String[] args) {
+        // Print "Hello, World!" to the console
+        System.out.println("Hello, World!");
+    }
+}
+            </code></pre>
+            <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+        </div>
+
+        <!-- Run Code -->
+        <div class="step" id="run-code">
+            <h2>Step 2: Compile and Run the Code</h2>
+            <p>Now that you have your code written, follow these instructions to compile and run it:</p>
+
+            <h3>On Desktop:</h3>
+            <p>1. Open a terminal or command prompt and navigate to the directory where you saved <code>HelloWorld.java</code>.</p>
+            <p>2. Compile the code by running the following command:</p>
+            <pre><code>javac HelloWorld.java</code></pre>
+            <p>3. Run the compiled code with:</p>
+            <pre><code>java HelloWorld</code></pre>
+            <p>You should see <code>Hello, World!</code> printed to your terminal or command prompt.</p>
+        </div>
+
+        <!-- Setup -->
+        <div class="step" id="setup">
+            <h2>Setting Up Your Java Development Environment</h2>
+            <p>Before you can write and run Java programs, you'll need to set up your development environment. Here's how:</p>
+            <ol>
+                <li><strong>Download the JDK:</strong> Visit the <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html" target="_blank" style="color: #9cdcfe;">Java SE Downloads</a> page and download the JDK suitable for your operating system.</li>
+                <li><strong>Install the JDK:</strong> Follow the installation instructions specific to your operating system.</li>
+                <li><strong>Set up the PATH environment variable:</strong> Ensure that the <code>bin</code> directory of your JDK installation is added to your system's PATH.</li>
+                <li><strong>Verify the installation:</strong> Open a terminal or command prompt and type <code>java -version</code> and <code>javac -version</code> to check if Java is correctly installed.</li>
+            </ol>
+        </div>
+
+        <!-- Syntax & Basics -->
+        <div class="step" id="syntax">
+            <h2>Java Syntax and Basics</h2>
+            <p>Java is known for its simplicity and readability. Here are some of the fundamental concepts:</p>
+            
+            <h3>Basic Structure</h3>
+            <pre><code>public class ClassName {
+    public static void main(String[] args) {
+        // Your code here
+    }
+}
+            </code></pre>
+            <p>This is the basic structure of a Java program. The <code>public class</code> defines the class name, and the <code>main</code> method is the entry point of the program.</p>
+
+            <h3>Data Types</h3>
+            <p>Java supports various data types, including:</p>
+            <ul>
+                <li><code>int</code>: Represents integers.</li>
+                <li><code>double</code>: Represents floating-point numbers.</li>
+                <li><code>char</code>: Represents a single character.</li>
+                <li><code>boolean</code>: Represents true or false values.</li>
+            </ul>
+
+            <h3>Control Flow Statements</h3>
+            <p>Java provides several control flow statements such as:</p>
+            <ul>
+                <li><code>if</code>, <code>else</code>: Conditional statements.</li>
+                <li><code>for</code>, <code>while</code>, <code>do-while</code>: Looping statements.</li>
+                <li><code>switch</code>: Selects among multiple options based on a variable's value.</li>
+            </ul>
+        </div>
+
+        <!-- Advanced Topics -->
+        <div class="step" id="advanced-topics">
+            <h2>Advanced Java Topics</h2>
+            <p>As you become more familiar with Java, you might want to explore advanced topics:</p>
+
+            <h3>Object-Oriented Programming (OOP)</h3>
+            <p>Java is an object-oriented language, meaning it uses objects and classes to structure code. Key concepts include:</p>
+            <ul>
+                <li><strong>Inheritance:</strong> Allows a class to inherit fields and methods from another class.</li>
+                <li><strong>Polymorphism:</strong> Enables a single action to behave differently based on the object.</li>
+                <li><strong>Encapsulation:</strong> Restricts access to certain components and only exposes necessary parts.</li>
+                <li><strong>Abstraction:</strong> Hides complex implementation details and shows only the essential features of an object.</li>
+            </ul>
+
+            <h3>Exception Handling</h3>
+            <p>Java provides a robust exception handling mechanism using <code>try</code>, <code>catch</code>, <code>finally</code>, and <code>throw</code> to handle errors and exceptions gracefully.</p>
+
+            <h3>Multithreading</h3>
+            <p>Java supports multithreading, allowing multiple threads to run concurrently. This is useful for applications that perform multiple tasks simultaneously.</p>
+
+            <h3>Java Collections Framework</h3>
+            <p>The Java Collections Framework provides a set of interfaces and classes to handle data collections, such as lists, sets, and maps, efficiently.</p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="step" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <h3>What is Java?</h3>
+            <p>Java is a high-level, class-based, object-oriented programming language designed to be platform-independent. It allows developers to write code once and run it anywhere.</p>
+
+            <h3>Do I need to install Java to run Java programs?</h3>
+            <p>Yes, you need to install the Java Runtime Environment (JRE) to run Java programs and the Java Development Kit (JDK) to develop Java applications.</p>
+
+            <h3>Where can I learn more about Java?</h3>
+            <p>There are many resources available online including tutorials, documentation, and forums. You can start with the <a href="https://docs.oracle.com/javase/tutorial/" target="_blank" style="color: #9cdcfe;">Oracle Java Tutorials</a>.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Java Guide. All rights reserved.</p>
+        <p><a href="https://github.com/ProgrammerKR" target="_blank">GitHub</a> | <a href="https://twitter.com/Pro_Hero_123" target="_blank">Twitter</a> | <a href="https://whatsapp.com/channel/0029VajmKFb9cDDiAYry3Z2x" target="_blank">Whatsapp</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function copyCode() {
+            const code = document.getElementById('javaCode');
+            const range = document.createRange();
+            range.selectNode(code);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Code copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
